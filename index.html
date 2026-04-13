@@ -10,9 +10,20 @@
       background: pink;
     }
 
+    .container {
+      position: relative;
+    }
+
     img {
       width: 80%;
       margin-top:17px;
+    }
+
+    .menu {
+      position: absolute;
+      top: 300px;   /* 👈 AJUSTA A ALTURA AQUI */
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .btn {
@@ -29,20 +40,12 @@
       animation: pulsar 1.5s infinite;
     }
 
-    /* PULSAR */
     @keyframes pulsar {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
     }
 
-    /* HOVER */
     .btn:hover {
       transform: scale(1.1);
     }
@@ -52,14 +55,18 @@
 
 <body>
 
-<img src="1.png" alt="1">
+<div class="container">
 
-<br>
+  <img src="1.png" alt="1">
 
-<a href="about.html" class="btn">About</a>
-<a href="titles.html" class="btn">Titles</a>
-<a href="players.html" class="btn">Players</a>
-<a href="opinion.html" class="btn">Opinion</a>
+  <div class="menu">
+    <a href="about.html" class="btn">About</a>
+    <a href="titles.html" class="btn">Titles</a>
+    <a href="players.html" class="btn">Players</a>
+    <a href="opinion.html" class="btn">Opinion</a>
+  </div>
+
+</div>
 
 </body>
 </html>
